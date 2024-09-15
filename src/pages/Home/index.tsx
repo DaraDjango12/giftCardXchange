@@ -1,18 +1,18 @@
 import HeroSection from "@components/hero/HeroSection";
 import MainLayout from "@layouts/MainLayout";
 // import OpportunitiesHome from "@components/opportunities/OpportunitiesHome";
-// import TrustedPartners from "@components/trustedPartners/TrustedPartners";
+import TrustedPartnerCards from "@components/trustedPartners/TrustedPartnerCards";
 // import Slider from "@components/commons/slider";
 
 const Home = () => {
   return (
-    <MainLayout>
+    <MainLayout >
       <HeroSection />
       {/* <Slider/> */}
 
       {/* <OpportunitiesHome /> */}
 
-      {/* <TrustedPartners /> */}
+      <TrustedPartnerCards />
       {/* <FAQ />
       <CallToAction /> */}
 

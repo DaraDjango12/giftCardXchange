@@ -34,7 +34,7 @@ const AdminViewUser = lazy(() => import("@components/admin/UserInfo/ViewUser"));
 const AppRoutes = () => {
   return (
     <>
-      <Routes>
+      <Routes >
         {/* Home Page */}
         <Route
           path=""
