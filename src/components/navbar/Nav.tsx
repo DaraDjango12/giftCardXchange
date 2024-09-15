@@ -18,7 +18,7 @@ const Nav = () => {
   ];
 
   return (
-    <nav className="bg-white sticky top-0 z-[999]">
+    <nav className=" sticky top-0 z-[999]">
       <SectionLayout>
         
 

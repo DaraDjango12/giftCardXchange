@@ -8,12 +8,15 @@ import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
-    <main className="w-full bg-BrandBg py-[3.6rem]">
+    <main className="w-full bg-BrandBg py-[1.6rem]">
       <SectionLayout>
         <div className="flex justify-between items-center">
-          <div className="w-full lg:w-[64.9rem] lg:h-[35.4rem]">
+          <div className="w-full ">
             <h1 className="font-bold mx-0 text-[2.4rem] lg:text-[4.6rem]">
-              Get Paid for Your Gift Cards in 5 Minutes!
+              Get Paid for Your 
+            </h1>
+            <h1 className="font-bold mx-0 text-[2.4rem] lg:text-[4.6rem]">
+               Gift Cards in 5 Minutes!
             </h1>
 
             <div className="block h-[18.2rem] mx-auto bg-slate-950 md:hidden">
@@ -25,7 +28,8 @@ const HeroSection = () => {
             </div>
 
             <p className="md:text-[1.8rem] text-BrandGray700 py-3">
-            Experience the fastest way to turn your gift cards into cash, selling with confidence and receiving your payments instantly.
+              Experience the fastest way to turn your gift cards into cash,
+              selling with confidence and receiving your payments instantly.
             </p>
             <div>
               <Link to="/register">
@@ -39,8 +43,6 @@ const HeroSection = () => {
                 </PrimaryBtn>
               </Link>
             </div>
-
-            
           </div>
 
           <div className="hidden md:block lg:h-[39.8rem] lg:w-[37.9rem]">
