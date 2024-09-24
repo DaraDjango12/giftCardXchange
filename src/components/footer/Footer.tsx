@@ -2,7 +2,9 @@
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <div className=" h-[4rem] flex justify-center items-center">
+      <div>Salama X INC.</div>
+    </div>
   )
 }
 

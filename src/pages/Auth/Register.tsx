@@ -36,10 +36,10 @@ const Register = () => {
       <div className="w-full lg:w-[50%] bg-BrandAuth h-screen">
         <AuthHeader />
 
-        <div className="md:flex flex-col justify-center items-center md:h-[calc(100%-120px)] mt-[4.6rem] md:mt-0">
-          <div className="w-full md:w-[36.7rem] mx-auto px-8 md:px-0">
+        <div className="md:flex flex-col justify-center items-center md:h-[calc(100%-120px)] mt-[2.6rem] md:mt-0">
+          <div className="w-full md:w-[30.7rem] mx-auto px-8 md:px-0">
             <div className="text-center lg:text-left">
-              <H2Heading title="Create Account" />
+              <H2Heading title="Get Started" />
             </div>
 
             <Form layout="vertical" onFinish={onFinish} autoComplete="off">
