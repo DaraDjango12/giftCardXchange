@@ -1,8 +1,24 @@
+import HeroSection from "@components/hero/HeroSection";
+import MainLayout from "@layouts/MainLayout";
+// import OpportunitiesHome from "@components/opportunities/OpportunitiesHome";
+import TrustedPartnerCards from "@components/trustedPartners/TrustedPartnerCards";
+// import Slider from "@components/commons/slider";
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <MainLayout >
+      <HeroSection />
+      {/* <Slider/> */}
 
-export default Home
+      {/* <OpportunitiesHome /> */}
+
+      <TrustedPartnerCards />
+      {/* <FAQ />
+      <CallToAction /> */}
+
+      
+    </MainLayout>
+  );
+};
+
+export default Home;
