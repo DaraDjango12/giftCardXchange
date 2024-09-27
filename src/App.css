@@ -4,6 +4,16 @@
  
 }
 
+
+html {
+  font-size: 10px;
+}
+
+* {
+  font-size: 1.4rem;
+  font-family: "Manrope", sans-serif;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

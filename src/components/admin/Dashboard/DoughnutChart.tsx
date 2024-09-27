@@ -1,8 +1,8 @@
-import { DoughnutChartProps } from "@constants/index.types";
+// import { DoughnutChartProps } from "@constants/index.types";
 import { Chart, ChartData, ChartOptions } from "chart.js";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import React from "react";
-import { Doughnut } from "react-chartjs-2";
+// import { Doughnut } from "react-chartjs-2";
 import "chartjs-plugin-annotation";
 
 Chart.register(ChartDataLabels);
@@ -38,7 +38,7 @@ const DoughnutChart: React.FC<DoughnutChartProps & { data: DoughnutData }> = ({
 
   return (
     <div className="w-[25rem] h-[25rem]">
-      <Doughnut data={data} options={options} />
+      {/* <Doughnut data={data} options={options} /> */}
     </div>
   );
 };

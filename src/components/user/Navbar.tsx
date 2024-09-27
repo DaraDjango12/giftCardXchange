@@ -51,8 +51,8 @@ const Navbar: React.FC<{ activeTab: string; collapsed: boolean }> = ({
           <div className="flex items-center gap-2">
             <IoIosContact size={50} color="#6e6f70" />
             <div className="hidden md:flex flex-col">
-              <H5Heading title="Dara A." />
-              <PText text="Admin" />
+              <H5Heading title="Musfiq A." />
+              <PText text="User" />
             </div>
           </div>
         </div>

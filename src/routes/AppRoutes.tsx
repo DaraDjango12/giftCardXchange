@@ -21,20 +21,23 @@ const ResetPasswordSuccess = lazy(
   () => import("@pages/Auth/components/ResetPasswordSuccess")
 );
 
+// Admin Dashboard
 const AdminDashboard = lazy(() => import("@pages/Admin"));
-const AdminUsers = lazy(() => import("@components/admin/UserInfo"));
-const AdminOpportunities = lazy(
-  () => import("@components/admin/Opportunities")
-);
-const AdminComplaints = lazy(() => import("@components/admin/Complaints"));
-const AdminBroadCast = lazy(() => import("@components/admin/BroadCast"));
+const Rates = lazy(() => import("@components/admin/Rates"));
+const Expenses = lazy(() => import("@components/admin/Expenses"));
+const Request = lazy(() => import("@components/admin/Request"));
 
-const AdminViewUser = lazy(() => import("@components/admin/UserInfo/ViewUser"));
+// User Dashboard
+const UserDashboard = lazy(() => import("@pages/User"));
+const SellGiftCards = lazy(() => import("@components/user/SellGiftCards"));
+const Transactions = lazy(() => import("@components/user/Transactions"));
+const Payout = lazy(() => import("@components/user/Transactions"));
+const Wallet = lazy(() => import("@components/user/Wallet"));
 
 const AppRoutes = () => {
   return (
     <>
-      <Routes >
+      <Routes>
         {/* Home Page */}
         <Route
           path=""
@@ -117,21 +120,8 @@ const AppRoutes = () => {
             </React.Suspense>
           }
         />
-
-        {/* User  Page .... with nested pages */}
-        {/* <Route
-          path="/schollar"
-          element={
-            <React.Suspense>
-              <SchollarHome/>
-            </React.Suspense>
-          }
-        > */}
         <Route path="profile" element={<Profile />} />
-        {/* <Route path="profile/:id" element={<ViewProfile />} /> */}
-
         <Route path="settings" element={<Settings />} />
-        {/* </Route> */}
 
         {/* Admin Dashboard */}
         <Route
@@ -142,12 +132,24 @@ const AppRoutes = () => {
             </React.Suspense>
           }
         >
-          <Route path="users" element={<AdminUsers />} />
-          <Route path="users/:userId" element={<AdminViewUser />} />
-          <Route path="opportunities" element={<AdminOpportunities />} />
+          <Route path="rates" element={<Rates />} />
+          <Route path="expenses" element={<Expenses />} />
+          <Route path="request" element={<Request />} />
+        </Route>
 
-          <Route path="complaints" element={<AdminComplaints />} />
-          <Route path="broadcast" element={<AdminBroadCast />} />
+        {/* User Dashboard */}
+        <Route
+          path="/user"
+          element={
+            <React.Suspense>
+              <UserDashboard />
+            </React.Suspense>
+          }
+        >
+          <Route path="sell-giftcards" element={<SellGiftCards />} />
+          <Route path="transactions" element={<Transactions />} />
+          <Route path="payout" element={<Payout />} />
+          <Route path="wallet" element={<Wallet />} />
         </Route>
       </Routes>
     </>

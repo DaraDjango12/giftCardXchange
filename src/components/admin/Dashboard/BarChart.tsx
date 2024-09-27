@@ -1,8 +1,8 @@
-import { BarChartProps } from "@constants/index.types";
+// import { BarChartProps } from "@constants/index.types";
 import { Chart, registerables } from "chart.js";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import React, { useState } from "react";
-import { Bar } from "react-chartjs-2";
+// import { Bar } from "react-chartjs-2";
 
 Chart.register(...registerables, ChartDataLabels);
 
@@ -67,7 +67,7 @@ const BarChart: React.FC<BarChartProps> = ({
         </select>
       </div>
 
-      <Bar data={data} options={options} plugins={[ChartDataLabels]} />
+      {/* <Bar data={data} options={options} plugins={[ChartDataLabels]} /> */}
     </div>
   );
 };
