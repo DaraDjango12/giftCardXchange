@@ -13,7 +13,9 @@ export default {
         ManropeSemiBold: ["Manrope-SemiBold", "sans-serif"],
       },
       colors: {
-        BrandPrimary: "#005B96",
+        // background: #005B96;
+
+        BrandPrimary: "#005B96", 
         BrandSecondary: "#22C55E",
         BrandGray900: "#080D14",
         BrandGray800: "#33354D",
@@ -30,6 +32,10 @@ export default {
         BrandBg: "#f3effe",
         BrandBg1: "#F9EDFE",
         Brandbg: "#09070799",
+
+        BrandText: "#737791",
+        BrandRed: "#EB5757",
+        BrandLightPink: "#FFFAF1",
       },
     },
   },

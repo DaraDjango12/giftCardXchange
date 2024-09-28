@@ -1,9 +1,9 @@
-import Navbar from "@components/admin/Navbar";
-import Sidebar from "@components/admin/Sidebar";
+import Navbar from "@components/user/Navbar";
+import SideBar from "@components/user/Sidebar";
 import { ReactNode, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
-const AdminDashboardLayout: React.FC<{ children: ReactNode }> = ({
+const UserDashboardLayout: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
   const [collapsed, setCollapsed] = useState(false);
@@ -17,7 +17,7 @@ const AdminDashboardLayout: React.FC<{ children: ReactNode }> = ({
     <div className="bg-[#f9f7f7] min-h-screen">
       <div className="sticky top-0 z-[908]">
         <div className="max-w-[144rem] w-full mx-auto px-[2rem] md:px-0 shadow-sm">
-          <Navbar activeTab={activeTab}   collapsed={collapsed} />
+          <Navbar activeTab={activeTab} collapsed={collapsed} />
         </div>
       </div>
 
@@ -27,14 +27,14 @@ const AdminDashboardLayout: React.FC<{ children: ReactNode }> = ({
             collapsed ? "w-[10rem]" : "w-[23rem]"
           }`}
         >
-          <Sidebar
+          <SideBar
             collapsed={collapsed}
             setCollapsed={setCollapsed}
             activeTab={activeTab}
           />
         </div>
         <div
-        // md:min-w-[89rem]
+          // md:min-w-[89rem]
           className={`w-full  bg-[#f9f7f7] ${
             collapsed ? "ml-[10rem]" : "ml-[23rem]"
           }`}
@@ -56,4 +56,4 @@ const AdminDashboardLayout: React.FC<{ children: ReactNode }> = ({
   );
 };
 
-export default AdminDashboardLayout;
+export default UserDashboardLayout;

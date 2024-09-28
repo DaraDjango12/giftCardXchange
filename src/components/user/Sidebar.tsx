@@ -64,32 +64,32 @@ const SideBar: React.FC<SideBarProps> = ({
 
           {/* Dashboard */}
           <Link
-            to="/admin"
+            to="/user"
             className={`flex gap-2 items-center cursor-pointer pl-[3.2rem] pr-[2rem]  py-[1rem] ${
-              activeTab === "/admin" && "bg-BrandPrimary  rounded-r-[2rem]"
+              activeTab === "/user" && "bg-BrandPrimary  rounded-r-[2rem]"
             }`}
           >
             {collapsed ? (
               <div className=" pr-[2rem] ">
                 <MdDashboard
                   size={18}
-                  color={`${activeTab === "/admin" ? "#fff" : "#000"} `}
+                  color={`${activeTab === "/user" ? "#fff" : "#000"} `}
                 />
               </div>
             ) : (
               <div
                 className={`flex gap-2 items-center cursor-pointer  ${
-                  activeTab === "/admin" && "bg-BrandPrimary  rounded-r-[2rem]"
+                  activeTab === "/user" && "bg-BrandPrimary  rounded-r-[2rem]"
                 }`}
               >
                 {" "}
                 <MdDashboard
                   size={18}
-                  color={`${activeTab === "/admin" ? "#fff" : "#000"} `}
+                  color={`${activeTab === "/user" ? "#fff" : "#000"} `}
                 />
                 <h2
                   className={`${
-                    activeTab === "/admin" ? "text-[#fff]" : "text-[#000]"
+                    activeTab === "/user" ? "text-[#fff]" : "text-[#000]"
                   } text-[1.6rem] font-[600] `}
                 >
                   Dashboard
@@ -98,11 +98,11 @@ const SideBar: React.FC<SideBarProps> = ({
             )}
           </Link>
 
-          {/* Rates */}
+          {/* sell gift cards */}
           <Link
-            to="/admin/rates"
+            to="/user/sell-giftcards"
             className={`flex gap-2 items-center cursor-pointer pl-[3.2rem] pr-[2rem]  ${
-              activeTab === "/admin/rates" &&
+              activeTab === "/user/sell-giftcards" &&
               "bg-BrandPrimary  rounded-r-[2rem]"
             }`}
           >
@@ -110,37 +110,87 @@ const SideBar: React.FC<SideBarProps> = ({
               <div className=" pr-[2rem] py-[1rem]">
                 <IoMdInformationCircleOutline
                   size={18}
-                  color={`${activeTab === "/admin/rates" ? "#fff" : "#000"} `}
+                  color={`${
+                    activeTab === "/user/sell-giftcards" ? "#fff" : "#000"
+                  } `}
                 />
               </div>
             ) : (
               <div
                 className={`flex gap-2 items-center cursor-pointer  py-[1rem] ${
-                  activeTab === "/admin/rates" &&
+                  activeTab === "/user/sell-giftcards" &&
                   "bg-BrandPrimary  rounded-r-[2rem]"
                 }`}
               >
                 {" "}
                 <IoMdInformationCircleOutline
                   size={18}
-                  color={`${activeTab === "/admin/rates" ? "#fff" : "#000"} `}
+                  color={`${
+                    activeTab === "/user/sell-giftcards" ? "#fff" : "#000"
+                  } `}
                 />
                 <h2
                   className={`${
-                    activeTab === "/admin/rates" ? "text-[#fff]" : "text-[#000]"
+                    activeTab === "/user/sell-giftcards"
+                      ? "text-[#fff]"
+                      : "text-[#000]"
                   } text-[1.6rem] font-[600] `}
                 >
-                  Gift Card Rates
+                  Sell Gift Cards
                 </h2>
               </div>
             )}
           </Link>
 
-          {/* Expenses */}
+          {/* transactions */}
           <Link
-            to="/admin/expenses"
+            to="/user/transactions"
             className={`flex gap-2 items-center cursor-pointer pl-[3.2rem] pr-[2rem]  ${
-              activeTab === "/admin/expenses" &&
+              activeTab === "/user/transactions" &&
+              "bg-BrandPrimary  rounded-r-[2rem]"
+            }`}
+          >
+            {collapsed ? (
+              <div className=" pr-[2rem] py-[1rem]">
+                <IoMdInformationCircleOutline
+                  size={18}
+                  color={`${
+                    activeTab === "/user/transactions" ? "#fff" : "#000"
+                  } `}
+                />
+              </div>
+            ) : (
+              <div
+                className={`flex gap-2 items-center cursor-pointer  py-[1rem] ${
+                  activeTab === "/user/transactions" &&
+                  "bg-BrandPrimary  rounded-r-[2rem]"
+                }`}
+              >
+                {" "}
+                <IoMdInformationCircleOutline
+                  size={18}
+                  color={`${
+                    activeTab === "/user/transactions" ? "#fff" : "#000"
+                  } `}
+                />
+                <h2
+                  className={`${
+                    activeTab === "/user/transactions"
+                      ? "text-[#fff]"
+                      : "text-[#000]"
+                  } text-[1.6rem] font-[600] `}
+                >
+                  All Transactions
+                </h2>
+              </div>
+            )}
+          </Link>
+
+          {/* payout */}
+          <Link
+            to="/user/payout"
+            className={`flex gap-2 items-center cursor-pointer pl-[3.2rem] pr-[2rem]  ${
+              activeTab === "/user/payout" &&
               "bg-BrandPrimary  rounded-r-[2rem]"
             }`}
           >
@@ -148,43 +198,37 @@ const SideBar: React.FC<SideBarProps> = ({
               <div className=" pr-[2rem] py-[1rem]">
                 <BiEditAlt
                   size={18}
-                  color={`${
-                    activeTab === "/admin/expenses" ? "#fff" : "#000"
-                  } `}
+                  color={`${activeTab === "/user/payout" ? "#fff" : "#000"} `}
                 />
               </div>
             ) : (
               <div
                 className={`flex gap-2 items-center cursor-pointer  py-[1rem] ${
-                  activeTab === "/admin/expenses" &&
+                  activeTab === "/user/payout" &&
                   "bg-BrandPrimary  rounded-r-[2rem]"
                 }`}
               >
                 {" "}
                 <BiEditAlt
                   size={18}
-                  color={`${
-                    activeTab === "/admin/expenses" ? "#fff" : "#000"
-                  } `}
+                  color={`${activeTab === "/user/payout" ? "#fff" : "#000"} `}
                 />
                 <h2
                   className={`${
-                    activeTab === "/admin/expenses"
-                      ? "text-[#fff]"
-                      : "text-[#000]"
+                    activeTab === "/user/payout" ? "text-[#fff]" : "text-[#000]"
                   } text-[1.6rem] font-[600] `}
                 >
-                  All Expenses
+                  Manage Payout
                 </h2>
               </div>
             )}
           </Link>
 
-          {/* Request */}
+          {/* wallet */}
           <Link
-            to="/admin/request"
+            to="/user/wallet"
             className={`flex gap-2 items-center cursor-pointer pl-[3.2rem] pr-[2rem]  ${
-              activeTab === "/admin/request" &&
+              activeTab === "/user/wallet" &&
               "bg-BrandPrimary  rounded-r-[2rem]"
             }`}
           >
@@ -192,29 +236,27 @@ const SideBar: React.FC<SideBarProps> = ({
               <div className=" pr-[2rem] py-[1rem]">
                 <SlShield
                   size={18}
-                  color={`${activeTab === "/admin/request" ? "#fff" : "#000"} `}
+                  color={`${activeTab === "/user/wallet" ? "#fff" : "#000"} `}
                 />
               </div>
             ) : (
               <div
                 className={`flex gap-2 items-center cursor-pointer  py-[1rem] ${
-                  activeTab === "/admin/request" &&
+                  activeTab === "/user/wallet" &&
                   "bg-BrandPrimary  rounded-r-[2rem]"
                 }`}
               >
                 {" "}
                 <SlShield
                   size={18}
-                  color={`${activeTab === "/admin/request" ? "#fff" : "#000"} `}
+                  color={`${activeTab === "/user/wallet" ? "#fff" : "#000"} `}
                 />
                 <h2
                   className={`${
-                    activeTab === "/admin/request"
-                      ? "text-[#fff]"
-                      : "text-[#000]"
+                    activeTab === "/user/wallet" ? "text-[#fff]" : "text-[#000]"
                   } text-[1.6rem] font-[600] `}
                 >
-                  Review Request
+                  Wallet
                 </h2>
               </div>
             )}

@@ -2,12 +2,9 @@ import cover from "@assets/images/razorrightsignin.svg";
 import AuthBtn from "@components/commons/buttons/AuthBtn";
 import H2Heading from "@components/commons/headings/H2Heading";
 import H3Heading from "@components/commons/headings/H3Heading";
-import { Checkbox, Flex, Form, Input, message, Image } from "antd";
-import { Link, useNavigate } from "react-router-dom";
+import { Checkbox, Flex, Form, Image, Input } from "antd";
+import { Link } from "react-router-dom";
 import AuthHeader from "./components/AuthHeader";
-// import { useLoginMutation } from "@api/features/auth.api";
-// import { useAppDispatch } from "@api/data/store";
-// import { setCredentials } from "@api/data/authSlice";
 
 type FieldType = {
   email: string;
@@ -98,7 +95,7 @@ const Login = () => {
               </Flex>
 
               <Form.Item>
-                <AuthBtn isLoading={"loginLoading"}>Sign in</AuthBtn>
+                <AuthBtn isLoading={true}>Sign in</AuthBtn>
               </Form.Item>
             </Form>
           </div>
@@ -106,11 +103,7 @@ const Login = () => {
       </div>
 
       {/* right side */}
-
-      <div
-        className=" bg-BrandPrimary hidden lg:w-[50%] lg:flex lg:flex-col md:justify-center items-center mx-auto"
-        
-      >
+      <div className=" bg-BrandPrimary hidden lg:w-[50%] lg:flex lg:flex-col md:justify-center items-center mx-auto">
         <Image className="m-auto" src={cover} alt="okay" />
 
         <div className="text-white text-center px-20 mb-20">
